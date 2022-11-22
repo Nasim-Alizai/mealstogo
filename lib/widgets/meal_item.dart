@@ -21,13 +21,10 @@ class MealItem extends StatelessWidget {
     switch (complexity) {
       case Complexity.Simple:
         return 'Simple';
-        break;
       case Complexity.Challenging:
         return 'Challenging';
-        break;
       case Complexity.Hard:
         return 'Hard';
-        break;
       default:
         return 'Unknown';
     }
@@ -37,13 +34,10 @@ class MealItem extends StatelessWidget {
     switch (affordability) {
       case Affordability.Affordable:
         return 'Affordable';
-        break;
       case Affordability.Pricey:
         return 'Pricey';
-        break;
       case Affordability.Luxurious:
         return 'Expensive';
-        break;
       default:
         return 'Unknown';
     }
@@ -82,7 +76,10 @@ class MealItem extends StatelessWidget {
                   right: 10,
                   child: Container(
                     width: 300,
-                    color: Colors.black54,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(5),
+                      color: Colors.black54,
+                    ),
                     padding: EdgeInsets.symmetric(
                       vertical: 5,
                       horizontal: 20,
