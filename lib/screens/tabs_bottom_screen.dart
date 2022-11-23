@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mealstogo/widgets/main_drawer.dart';
 
 import './favorites_screen.dart';
 import './categories_screen.dart';
@@ -34,6 +35,7 @@ class _TabsBottomScreenState extends State<TabsBottomScreen> {
         title: Text((_pages[_selectedPageIndex]['title'] as String)),
       ),
       body: (_pages[_selectedPageIndex]['page'] as Widget),
+      drawer: MainDrawer(),
       bottomNavigationBar: BottomNavigationBar(
         onTap: _selectPage,
         backgroundColor: Theme.of(context).colorScheme.primary,
